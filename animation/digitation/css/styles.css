@@ -1,0 +1,52 @@
+:root{
+    --color-background-dark: #191919;
+    --color-letters: rgb(255,255,255,.75);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--color-background-dark); 
+}
+.line{
+    border-right:2px solid var(--color-letters);
+    white-space: nowrap;
+    overflow: hidden;
+
+    color: var(--color-letters);
+    font-family:'Special Elite', monospace;
+    font-size: 2rem;
+    margin: 0 auto;
+    text-align: center;
+
+
+
+}
+.animation{
+   animation: blinkBorder 500ms infinite normal
+   , blinkLetters 4s steps(45) 1s normal both; 
+}
+
+@keyframes blinkLetters{
+    from{
+        width: 0;
+    }
+    to{
+        width: 33rem;
+    }
+}
+@keyframes blinkBorder{
+    from{
+        boder-right-color: var(--color-letters);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}

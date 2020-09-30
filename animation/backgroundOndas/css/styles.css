@@ -1,0 +1,81 @@
+:root{
+    --color-background-dark: #191919;
+    --color-letters: rgb(255,255,255,.75);
+    
+    --color-degrade-two: #0f4c75;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    
+    font-size: 5rem;
+    color: var(--color-letters);
+    
+   
+    text-align: center;
+
+}
+header,
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+header{
+    background: var(--color-background-dark);
+    position: relative;
+}
+section{
+    background: var(--color-degrade-two);
+}
+
+header h1 {
+    border: 5px solid white;
+    padding: 10px 50px;
+    margin: 50px;
+    z-index: 2;
+  }
+
+.waves{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.wave-1 {
+    animation: moveWave1 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveWave1 {
+    from {
+      transform: translateX(-2000px);
+    }
+  }
+
+  .wave-2 {
+    animation: moveWave2 5s 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveWave2 {
+    from {
+      transform: translateX(-1700px);
+    }
+  }
+
+  .wave-3 {
+    animation: moveWave3 5s 0.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveWave3 {
+    from {
+      transform: translateX(-1500px);
+    }
+  }
